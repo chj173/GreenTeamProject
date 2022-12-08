@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+		PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="ReservationDto" type="com.greenart.bctour.Reservation.ReservationDto"/>
+		<typeAlias alias="WishDto" type="com.greenart.bctour.WishList.WishDto"/>
+		<typeAlias alias="ProductDto" type="com.greenart.bctour.Product.ProductDto"/>
+		<typeAlias alias="BCUserDto" type="com.greenart.bctour.User.BCUserDto"/>
+		<typeAlias alias="BoardDto" type="com.greenart.bctour.Board.BoardDto"/>
+		<typeAlias alias="CommunityDto" type="com.greenart.bctour.Community.CommunityDto"/>
+		<typeAlias alias="comm_commentDto" type="com.greenart.bctour.Community.comm_commentDto"/>
+		<typeAlias alias="SearchCondition" type="com.greenart.bctour.PageHandlerAndSearchCondition.SearchCondition"/>
+		<typeAlias alias="CommSearchCondition" type="com.greenart.bctour.PageHandlerAndSearchCondition.CommSearchCondition"/>
+		<typeAlias alias="ProductSearchCondition" type="com.greenart.bctour.PageHandlerAndSearchCondition.ProductSearchCondition"/>
+		<typeAlias alias="RecommendDto" type="com.greenart.bctour.Recommend.RecommendDto"/>
+		<typeAlias alias="rec_commentDto" type="com.greenart.bctour.Recommend.rec_commentDto"/>
+		<typeAlias alias="QuestionsDto" type="com.greenart.bctour.QuestionsAndAnswers.QuestionsDto"/>
+		<typeAlias alias="AnswerDto" type="com.greenart.bctour.QuestionsAndAnswers.AnswerDto"/>
+	</typeAliases>
+	
+</configuration>
