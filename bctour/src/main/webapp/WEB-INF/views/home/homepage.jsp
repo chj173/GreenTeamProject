@@ -15,7 +15,7 @@
 
    <meta charset="UTF-8">
     <title>비씨투어</title>
-    <link rel="stylesheet" href="${path }/resources/CSS/BCtourMainStyle.css?aasda">
+    <link rel="stylesheet" href="${path }/resources/CSS/BCtourMainStyle.css?">
     <link rel="stylesheet" href="${path }/resources/CSS/slider1.css?asdaf">
     <link rel="icon" href="${path }/resources/img/상단로고.jpg" />
 </head>
@@ -168,8 +168,7 @@
                                 </a>
                             </div>
                         </div>    
-                        <div class="reviewImg">
-                           		<p>${topList[0].rec_content}</p>
+						<div id="reviewImg" class="reviewImg">
            
                        	</div>
                         </div> 
@@ -207,12 +206,12 @@
     	let ext1 = /<img[^>]+src[^>]*>/;
     	let res1 = ext1.exec(img1);
     	if(res1 !=null){
-    	re1 = res1.toString();
-    	let thum1 = re1.replace(/style="[^"]+"/,'');
-    	document.getElementById("reviewImg").innerHTML=thum1;
+	    	re1 = res1.toString();
+	    	let thum1 = re1.replace(/style="[^"]+"/,'');
+	    	document.getElementById("reviewImg").innerHTML=thum1;
     	}
     	else{
-    	document.getElementById("reviewImg").innerHTML='<img src="/bctour/resources/img/noImg.jpg">';
+    		document.getElementById("reviewImg").innerHTML='<img src="/bctour/resources/img/noImg.jpg">';
     	}
 		
 </script>

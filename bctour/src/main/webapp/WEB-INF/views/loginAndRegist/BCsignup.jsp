@@ -74,11 +74,12 @@
 			// 6~20자 아이디 ( 영어와 숫자가능 특수문자 불가 )
 			var regExp = /^[a-zA-Z0-9]{5,19}$/g;
 			let id =$("input[name=id]").val();
+			let id2 = id.toLowerCase();
 	        $.ajax({
 	            type:'GET',       // 요청 메서드
 	            url: '/bctour/checkId?id='+id ,  // 요청 URI
 	            success : function(result){
-	            if( id.match("admin") || id.match("ADMIN") ){
+		        if( id2.match("admin") ){
 		           	alert("admin이 들어간 아이디는 사용할 수 없습니다.\n다른아이디를 사용해주세요.");
 		           	$("#id_msg").css("display" , "none");
 		        } else {

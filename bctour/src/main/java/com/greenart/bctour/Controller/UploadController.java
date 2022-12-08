@@ -2,6 +2,8 @@ package com.greenart.bctour.Controller;
 
 import java.io.File;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,11 +22,12 @@ public class UploadController {
 	@ResponseBody
 	@PostMapping("/upload2")
 							  // 스프링에서 지원하는 파일 객체
-	public void uploadAjaxPost( MultipartFile[] uploadFile, Integer bno) {
+	public void uploadAjaxPost( MultipartFile[] uploadFile, Integer bno, HttpServletRequest request) {
 
 		System.out.println("ajax post update!");
         // 저장되는 경로 ( 자신의 파일 위치에 맞게 수정할 것)
-		String uploadFolder = "C:\\Users\\green\\git\\BCtour\\ch1\\src\\main\\webapp\\resources\\img";
+//		String uploadFolder2 = "C:\\Users\\green\\git\\BCtour\\ch1\\src\\main\\webapp\\resources\\img";
+		String uploadFolder = request.getSession().getServletContext().getRealPath("/")+"\\resources\\img";
 
 		for (MultipartFile multipartFile : uploadFile) { // 여러개의 파일일 경우 향상된 for문 이용
 
@@ -51,11 +54,12 @@ public class UploadController {
 	@ResponseBody
 	@PostMapping("/delete2")
 							  // 스프링에서 지원하는 파일 객체
-	public void deleteAjaxPost( MultipartFile[] deleteFile, Integer bno) {
+	public void deleteAjaxPost( MultipartFile[] deleteFile, Integer bno, HttpServletRequest request) {
 
 		System.out.println("ajax post update!");
 
-		String uploadFolder = "E:\\code\\MyBatisProject2\\src\\main\\webapp\\resources";
+//		String uploadFolder2 = "C:\\Users\\green\\git\\BCtour\\ch1\\src\\main\\webapp\\resources\\img";
+		String uploadFolder = request.getSession().getServletContext().getRealPath("/")+"\\resources\\img";
 
 		for (MultipartFile multipartFile : deleteFile) { // 여러개의 파일일 경우 향상된 for문 이용
 
