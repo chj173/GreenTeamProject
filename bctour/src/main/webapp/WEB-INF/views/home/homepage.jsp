@@ -171,9 +171,9 @@
 						<div id="reviewImg" class="reviewImg">
            
                        	</div>
-                        </div> 
-                    </div>
-                </c:if>
+                    </div> 
+                 </div>
+                 </c:if>
 <script>
         var slideWrapper = document.querySelector('.slider');
 		var slides = document.querySelectorAll('.item');
