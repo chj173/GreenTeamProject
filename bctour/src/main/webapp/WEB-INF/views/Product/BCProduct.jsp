@@ -115,7 +115,7 @@
             	</form>
             	</div>
             </div>
-  <script>
+   <script>
      document.getElementById('removebtn').addEventListener('click',e=>{
          if(!confirm("삭제하시겠습니까?")) {
         	 alert("삭제가 취소되었습니다.");
@@ -127,6 +127,6 @@
          form.submit();
          alert("상품이 삭제되었습니다.");
          });
-     </script>
+   </script>
 </body>
 </html>

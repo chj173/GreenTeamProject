@@ -80,9 +80,10 @@ public class ProductController {
 		return "Product/ProductWrite";
 	}
 	@PostMapping("/write")
-	public String write2(Model m,ProductDto productDto,MultipartFile[] uploadFile,HttpSession session,RedirectAttributes reatt) throws Exception{
+	public String write2(Model m,ProductDto productDto,MultipartFile[] uploadFile,HttpSession session,RedirectAttributes reatt,HttpServletRequest request) throws Exception{
 		try {
-			String uploadFolder = "C:\\Users\\green\\git\\BCtour\\ch1\\src\\main\\webapp\\resources\\img";
+//			String uploadFolder = "C:\\Users\\green\\git\\BCtour\\ch1\\src\\main\\webapp\\resources\\img";
+			String uploadFolder = request.getSession().getServletContext().getRealPath("/")+"\\resources\\img";
 			String str="";
 			for (MultipartFile multipartFile : uploadFile) { 
 				str = multipartFile.getOriginalFilename(); 
