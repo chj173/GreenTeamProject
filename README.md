@@ -11,7 +11,7 @@ BCTour
 
 ### 개발 환경
 > 사용 언어 : JAVA / JSP / JavaScript / jQuery / CSS
- 데이터베이스 : MySQL
+    데이터베이스 : MySQL
 
 ### 서버
 > apache-tomcat-9.0.52
